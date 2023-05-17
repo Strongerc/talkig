@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.sunc.talkig.mapper.CourseMapper">
+
+    <resultMap id="BaseResultMap" type="org.sunc.talkig.entity.Course">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="title" column="title" jdbcType="VARCHAR"/>
+            <result property="startTime" column="start_time" jdbcType="TIMESTAMP"/>
+            <result property="endTime" column="end_time" jdbcType="TIMESTAMP"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+            <result property="createUser" column="create_user" jdbcType="INTEGER"/>
+            <result property="updateUser" column="update_user" jdbcType="INTEGER"/>
+            <result property="image" column="image" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,title,start_time,
+        end_time,create_time,update_time,
+        create_user,update_user,image
+    </sql>
+    <insert id="insertCourse" parameterType="org.sunc.talkig.entity.Course" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO course (title,image,start_time,end_time) VALUES (#{title}, #{image}, #{startTime}, #{endTime} )
+    </insert>
+</mapper>
