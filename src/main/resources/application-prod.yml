@@ -2,10 +2,10 @@ server:
   port: 9092
 spring:
   application:
-    name: talking
+    name: talkig
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://103.133.178.167:3306/class?serverTimezone=GMT%2b8
+    url: jdbc:mysql://47.115.207.129:3306/class?serverTimezone=GMT%2b8
     username: root
     password: root
   #  redis:
@@ -24,8 +24,8 @@ mybatis-plus:
     db-config:
       id-type: ASSIGN_ID
 files:
-  path: /usr/local/img/
+  path: /usr/local/javaapp/img/
 
 file:
-  ip: 103.133.178.167
+  ip: 47.115.207.129
 
