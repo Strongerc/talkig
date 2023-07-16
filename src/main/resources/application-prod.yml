@@ -7,7 +7,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://47.115.207.129:3306/class?serverTimezone=GMT%2b8
     username: root
-    password: root
+    password: qzxyzcc123
   #  redis:
   #    host: 127.0.0.1
   #    port: 6379
