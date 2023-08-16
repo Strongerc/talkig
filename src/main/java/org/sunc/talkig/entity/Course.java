@@ -37,6 +37,9 @@ public class Course implements Serializable {
       @ApiModelProperty("封面")
       private String image;
 
+      @ApiModelProperty("1代表进行中默认值 0未开始 -1已结束")
+      private Integer statu;
+
       @ApiModelProperty("课程开始时间")
       private LocalDateTime startTime;
 

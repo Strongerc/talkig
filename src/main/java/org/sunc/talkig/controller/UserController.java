@@ -36,8 +36,12 @@ public class UserController {
     public Result login(HttpServletRequest request, @RequestBody User user) {
         log.info(user.toString());
 
-        String password = user.getPassword();
-        password = DigestUtils.md5DigestAsHex(password.getBytes());
+        String password = null;
+
+        if(user.getPassword() !=null) {
+            password = user.getPassword();
+            password = DigestUtils.md5DigestAsHex(password.getBytes());
+        }
 
         LambdaQueryWrapper<User> queryWrapper = new LambdaQueryWrapper<>();
         queryWrapper.eq(User::getUsername, user.getUsername());
